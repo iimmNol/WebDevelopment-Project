@@ -87,19 +87,5 @@
         <?php endfor; ?>
 
     </div>
-
-    <script>
-        // JavaScript to handle the 3D flip effect
-        const courseSections = document.querySelectorAll('.course-section');
-
-        courseSections.forEach(section => {
-            const title = section.querySelector('.course-title');
-            const content = section.querySelector('.course-content');
-
-            title.addEventListener('click', () => {
-                section.classList.toggle('active'); 
-            });
-        });
-    </script>
 </body>
 </html>
