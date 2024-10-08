@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 3D Container */
+.course-container {
+    perspective: 1000px; /* Creates 3D depth */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.course-section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease; /* Smooth transition for the 3D effect */
+}
+
+.course-title {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.course-title:hover {
+    background-color: #444;
+}
+
+.course-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transform: rotateX(-90deg); /* Initially hidden (flipped) */
+    transform-origin: top;
+    transition: transform 0.5s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none; 
+}
+
+/* Active class for open effect */
+.course-section.active .course-content {
+    transform: rotateX(0deg); /* Show content by flipping open */
+    display: block;
+}
+
+.sample-program {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+}
