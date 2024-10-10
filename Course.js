@@ -1,25 +1,34 @@
-document.querySelectorAll('.course-title').forEach(title => {
-    title.addEventListener('click', () => {
-        // Toggle active class on course section
-        const courseSection = title.parentElement;
-        courseSection.classList.toggle('active');
-    });
-});
+document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+            const hamburger = document.querySelector('.hamburger');
 
-const links = document.querySelectorAll('a');
+            // Toggle sidebar when hamburger is clicked
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('show');
+                mainContent.classList.toggle('shift');
+            });
 
-links.forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault(); 
+            // Expand sidebar when mouse enters
+            sidebar.addEventListener('mouseenter', () => {
+                sidebar.classList.add('expanded');
+            });
 
-    const   
- href = this.getAttribute('href'); 
+            // Collapse sidebar when mouse leaves
+            sidebar.addEventListener('mouseleave', () => {
+                sidebar.classList.remove('expanded');
+            });
 
+            // Test yourself button and start buttons
+            const startButtons = document.querySelectorAll('.start-btn');
+            startButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Starting course...');
+                });
+            });
 
-    document.body.classList.add('fade-out'); 
-
-    setTimeout(() => {
-      window.location.href = href; 
-    }, 500); 
-  });
-});
+            const testYourselfButton = document.querySelector('.test-yourself-btn');
+            testYourselfButton.addEventListener('click', () => {
+                window.location.href = 'quiz.php';
+            });
+        });
