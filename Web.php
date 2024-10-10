@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>PHP Learning Web</title>
-    <link rel="stylesheet" href="Web's.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Tutorials Menu</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="Home.js" defer></script>
 </head>
 <body>
-    <header>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+    
+
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="img/logo's/logo.png" alt="PHP Logo">
+        </div>
         <nav>
-            <a href="Sample.php">Samples</a>
-            <a href="Course.php">Course</a>
-            <a href="Quiz.php">Quiz</a>
-            <a href="References.php">References</a>
+            <ul>
+                <li><a href="Home.php">Home</a></li>
+                <li><a href="Course.php">Courses</a></li>
+                <li><a href="Quiz.php">Quizzes</a></li>
+                <li><a href="Sample.php">Sample Program</a></li>
+                <li><a href="References.php">References</a></li>
+                <li><a href="About us.php">About Us</a></li>
+            </ul>
         </nav>
-    </header>
+    </div>
 
-    <main>
-        <h2>Welcome!</h2>
-        <p>Learn the fundamentals of PHP programming with our comprehensive course.</p>
-        <p>Start your journey to becoming a skilled PHP developer today!</p>
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <h1>Welcome to PHP Tutorials</h1>
+        <p>Explore our tutorials on PHP and build dynamic web applications.</p>
+    </div>
 
-    </main>
-
-    <footer>
-        <p>&copy; 2024 PHP Course Website</p>
-    </footer>
-
-    <script src="Web's.js"></script>
+    <div class="footer">
+      <p>Footer</p>
+    </div>
 </body>
 </html>
