@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Initially hidden */
+    top: 0;
+    width: 60px; /* Start collapsed */
+    height: 100%;
+    background: rgb(38,39,40);
+    background: linear-gradient(90deg, rgba(38,39,40,1) 0%, rgba(13,18,17,1) 73%, rgba(77,93,97,1) 100%);
+    padding: 20px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease; /* Smooth transition for both width and position */
+    overflow: hidden;
+    z-index: 999;
+}
+
+.sidebar.show {
+    left: 0; /* Show the sidebar */
+}
+
+.sidebar.expanded {
+    width: 250px; /* Expand the sidebar on hover */
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    background-color: #333;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.expanded nav ul li a {
+    opacity: 1; /* Show links when sidebar expands */
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 80px; /* Adjust margin for collapsed sidebar */
+    padding: 20px;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease; /* Smooth content shift when sidebar expands */
+}
+
+.main-content.shift {
+    margin-left: 270px; /* Adjust main content when sidebar is fully expanded */
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    background: rgb(38,39,40);
+    background: linear-gradient(90deg, rgba(38,39,40,1) 0%, rgba(13,18,17,1) 73%, rgba(77,93,97,1) 100%);
+    color: white;
+    text-align: center;
+    z-index: 998; /* Keep footer below sidebar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content.shift {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .main-content.shift {
+        margin-left: 100px;
+    }
+}
