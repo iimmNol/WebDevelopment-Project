@@ -1,66 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Courses</title>
+  <style>
+    body {
+      font-family: url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+      gap: 20px;
+    }
+
+    .course-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 200px; /* Adjust as needed */
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .course-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .start-button {
+      background-color: #00bfa5; 
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-block; 
+    }
+
+    .start-button:hover {
+      background-color: #008c73;
+    }
+
+    .test-yourself {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .test-yourself a {
+      text-decoration: none;
+      color: #00bfa5;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Hamburger Menu -->
-    <div class="hamburger">☰</div>
+  <div class="container">
+    <h1>COURSES</h1>
 
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="logo">
-                <img src="img/logo's/logo.png" alt="PHP Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="Home.php">Home</a></li>
-                    <li><a href="Course.php">Courses</a></li>
-                    <li><a href="Quiz.php">Quizzes</a></li>
-                    <li><a href="Sample.php">Sample Program</a></li>
-                    <li><a href="References.php">References</a></li>
-                    <li><a href="Aboutus.php">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <header>
-                <h2>Courses</h2>
-                <button class="test-yourself-btn">Test Yourself</button>
-            </header>
-
-            <!-- Course Grid -->
-            <div class="course-grid">
-                <!-- Example of a Course Card -->
-                <?php
-                $courses = [
-                    ['title' => 'Introduction to PHP', 'img' => 'img/course1.jpg'],
-                    ['title' => 'PHP Basic Syntax', 'img' => 'img/course2.jpg'],
-                    ['title' => 'Conditional and Looping Statement', 'img' => 'img/course3.jpg'],
-                    ['title' => 'Arrays and Superglobals', 'img' => 'img/course4.jpg'],
-                    ['title' => 'Classes, Objects, and Forms', 'img' => 'img/course5.jpg'],
-                    ['title' => 'MySQL', 'img' => 'img/course6.jpg']
-                ];
-
-                // Loop through courses and generate cards
-                foreach ($courses as $course) {
-                    echo '
-                        <div class="course-card">
-                            <img src="'.$course['img'].'" alt="'.$course['title'].'">
-                            <h3>'.$course['title'].'</h3>
-                            <button class="start-btn">Start</button>
-                        </div>
-                    ';
-                }
-                ?>
-            </div>
-        </div>
+    <div class="test-yourself">
+      <a href="#">Test yourself &#8594;</a>
     </div>
+
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="img/INTRODUCTION.png" alt="Introduction to PHP"> 
+        <h3>Introduction to PHP</h3>
+        <button class="start-button">Start &#8594;</button>
+      </div>
+
+      <div class="course-card">
+        <img src="img/Syntax.png" alt="PHP Basic Syntax">
+        <h3>PHP Basic Syntax</h3>
+        <button class="start-button">Start &#8594;</button>
+      </div>
+
+      <div class="course-card">
+        <img src="img/Conditional.png" alt="Conditional and Looping Statement">
+        <h3>Condition and Loop Statement</h3>
+        <button class="start-button">Start &#8594;</button>
+      </div>
+
+      <div class="course-card">
+        <img src="img/Arrays.png" alt="Arrays and Superglobals">
+        <h3>Arrays and Superglobals</h3>
+        <button class="start-button">Start &#8594;</button>
+      </div>
+
+      <div class="course-card">
+        <img src="img/Classes.png" alt="Classes, Objects, and Forms">
+        <h3>Classes, Objects, and Forms</h3>
+        <button class="start-button">Start &#8594;</button>
+      </div>
+
+      <div class="course-card">
+        <img src="img/SQL.png" alt="MySQL">
+        <h3>MySQL</h3>
+        <button class="start-button">Start &#8594;</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
