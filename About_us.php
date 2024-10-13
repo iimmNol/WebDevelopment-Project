@@ -285,9 +285,9 @@
             <img src="img/Gallery/picture4.jpg" alt="Gallery Image 4">
         </div>
 
-        <!-- Button Seemore centered -->
+        <!-- Button Seemore -->
         <div class="button-container">
-            <button class="animated-button">
+            <button class="animated-button" onclick="window.location.href='https://www.canva.com/design/DAGTWZN20HQ/JF9-KXDYrc_awUVt9i8JNg/edit?utm_content=DAGTWZN20HQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton';">
                 <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
                     <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
                 </svg>
@@ -299,7 +299,6 @@
             </button>
         </div>
     </div>
-
     <div class="background-section"></div>
 
 </body>
