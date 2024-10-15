@@ -1,0 +1,267 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+@keyframes transitionIn {
+from {
+opacity: 0;
+transform: translateY(20px); /* Start slightly below */
+}
+to {
+opacity: 1;
+transform: translateY(0); /* End at normal position */
+}
+}
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: transitionIn 0.75s;
+}
+
+h1 {
+    font-size: 40px;
+    color: #00ffb7;
+    animation: transitionIn 0.75s;
+}
+
+h2 {
+    font-size: 24px;
+    color: #00ffb7;
+    margin-bottom: 50px;
+    animation: transitionIn 0.75s;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+    animation: transitionIn 0.75s;
+}
+
+.member {
+    background: rgb(38,40,39);
+    background: linear-gradient(90deg, rgba(38,40,39,1) 0%, rgba(222,237,233,0) 73%, rgba(64,199,158,0.29698375870069604) 100%);
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: transitionIn 0.75s;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    animation: transitionIn 0.75s;
+}
+
+.member img:hover {
+    transform: scale(1.25);
+    animation: transitionIn 0.75s;
+}
+
+.member h3 {
+    margin: 10px 0;
+    color: #00ffb7;
+    font-size: 18px;
+    animation: transitionIn 0.75s;
+}
+
+.member p {
+    color: #9e9e9e;
+    animation: transitionIn 0.75s;
+}
+
+.divider {
+    border-top: 2px solid #00ffb7;
+    width: 350px;
+    margin: 20px auto;
+    animation: transitionIn 0.75s;
+}
+
+/* Documentation */
+.gallery {
+    padding: 50px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: transitionIn 0.75s;
+}
+
+h2.gallery-title {
+    font-size: 40px;
+    color: #00ffb7;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: transitionIn 0.75s;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: transitionIn 0.75s;
+}
+.gallery-grid img:first-child {
+    grid-column: span 3;
+    height: 250px; 
+    object-fit: cover;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-color: white;
+    animation: transitionIn 0.75s;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    animation: transitionIn 0.75s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    animation: transitionIn 0.75s;
+}
+
+.background-section {
+    background-color: #00ffb7;
+    height: 30px;
+    margin-top: 50px;
+    animation: transitionIn 0.75s;
+}
+
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+    }
+
+    .member {
+        width: 80%;
+    }
+}
+
+/* Centering the Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* Adds some padding */
+    animation: transitionIn 0.75s;
+}
+
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #1f387e;
+    box-shadow: 0 0 0 2px #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: transitionIn 0.75s;
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #1f387e;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: transitionIn 0.75s;
+}
+
+.animated-button .arr-1 {
+    right: 16px;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #c5e5e4;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: transitionIn 0.75s;
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px);
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:hover svg {
+    fill: #1f387e;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+    animation: transitionIn 0.75s;
+}
+
+.animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}

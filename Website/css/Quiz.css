@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+    font-weight: 400; /* You can adjust the font weight as needed */
+    color: #fff; /* This will keep the text color consistent with your dark background */
+    background-color: #000; /* Ensure the dark background complements the design */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  @keyframes transitionIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+    }
+  }
+  
+  .title {
+    margin-left: 210px;
+    padding: 10px;
+    color: #26C69F;
+    font-size: 15px;
+    animation: transitionIn 0.75s;
+  }
+  
+  .titleBackground {
+      background: #0A0C0C;
+      margin-right: auto;
+      margin-left: auto;
+      border: solid 2px #26C69F;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      z-index: 1; /* Lower z-index so it stays behind the navbar */
+      animation: transitionIn 0.75s;
+  }
+  
+  .content {
+    padding: 16px;
+    color: #ffffff;
+    width: 968px;
+    animation: transitionIn 0.75s;
+  }
+  .references {
+    border-style: solid;
+    animation: transitionIn 0.75s;
+  }
+  
+  .time {
+      color: #00ffb7;
+      animation: transitionIn 0.75s;
+  }
+  
+  
+  main{
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-quiz-container {
+      width: 50rem; /* Increase the width */
+      height: 40rem; /* Increase the height */
+      background: linear-gradient(to right, rgb(4, 28, 20), rgb(4, 4, 4));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-details-container {
+      width: 80%;
+      height: 4rem;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;     /* Center vertically */
+      text-align: center;      /* Center text inside the box */
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-details-container h1 {
+      font-size: 1.2rem;
+      margin: 0; /* Remove any default margin to fix alignment */
+      padding: 0; /* Remove default padding */
+      color: #00ffb7; /* Ensure score is visible */
+      line-height: 1.2rem; /* Set line-height for better alignment */
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-question-container{
+      width: 80%;
+      height: 8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid darkgray;
+      border-radius: 25px;
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-question-container h1{
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 3px;
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-options-container{
+      width: 80%;
+      height: 12rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      animation: transitionIn 0.75s;
+  }
+  
+  .game-options-container span{
+      width: 45%;
+      height: 3rem;
+      border: 2px solid white;
+      border-radius: 20px;
+      overflow: hidden;
+      animation: transitionIn 0.75s;
+  }
+  span label{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+      font-weight: 600;
+      color: #00ffb7;
+      animation: transitionIn 0.75s;
+  }
+  
+  span label:hover{
+      -ms-transform: scale(1.12);
+      -webkit-transform: scale(1.12);
+      transform: scale(1.05);
+      color: #00ffb7;
+      animation: transitionIn 0.75s;
+  }
+  
+  input[type="radio"] {
+      position: relative;
+      display: none;
+      animation: transitionIn 0.75s;
+  }
+  
+  
+  input[type=radio]:checked ~ .option {
+      background: paleturquoise;
+      animation: transitionIn 0.75s;
+  }
+  
+  .next-button-container{
+      width: 50%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      animation: transitionIn 0.75s;
+  }
+  .next-button-container button{
+      width: 8rem;
+      height: 2rem;
+      border-radius: 10px;
+      background: none;
+      color: #00ffb7;
+      font-weight: 600;
+      border: 2px solid white;
+      cursor: pointer;
+      outline: none;
+      animation: transitionIn 0.75s;
+  }
+  .next-button-container button:hover{
+      background-color: rgb(143, 93, 93);
+      animation: transitionIn 0.75s;
+  }
+  
+  .modal-container{
+      display: none;
+      position: fixed;
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4); 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; 
+      -webkit-animation: fadeIn 1.2s ease-in-out;
+      animation: fadeIn 1.2s ease-in-out;
+      animation: transitionIn 0.75s;
+  }
+  
+  .modal-content-container {
+      height: 20rem;
+      width: 25rem;
+      background-color: rgb(43, 42, 42);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 25px;
+      text-align: center; /* Ensure text inside the modal is centered */
+      animation: transitionIn 0.75s;
+  }
+  
+  .modal-content-container h1{
+      font-size: 1.3rem;
+      height: 3rem;
+      color: #00ffb7;
+      text-align: center;
+      animation: transitionIn 0.75s;
+  }
+  
+  .grade-details {
+      width: 15rem;
+      height: 10rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Ensure the grade box content is centered */
+      text-align: center; /* Center the text inside the grade box */
+      animation: transitionIn 0.75s;
+  }
+  
+  .grade-details p {
+      margin: 5px 0; /* Reduce the margin to prevent excessive spacing */
+      color: #00ffb7;
+      text-align: center;
+      animation: transitionIn 0.75s;
+  }
+  
+  .modal-button-container {
+      height: 2rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: transitionIn 0.75s;
+  }
+  
+  .modal-button-container button {
+      width: 10rem;
+      height: 2rem;
+      background: none;
+      outline: none;
+      border: 1px solid rgb(252, 242, 241);
+      color: #00ffb7;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 20px;
+      margin-top: 10px; /* Add some space above the button */
+      animation: transitionIn 0.75s;
+  }
+  .modal-button-container button:hover{
+      background-color: rgb(83, 82, 82);
+      animation: transitionIn 0.75s;
+  }
+  
+  @media(min-width : 300px) and (max-width : 350px){
+      .game-quiz-container{
+          width: 90%;
+          height: 80vh;
+       }
+       .game-details-container h1{
+          font-size: 0.8rem;
+       }
+  
+       .game-question-container{
+          height: 6rem;
+       }
+       .game-question-container h1{
+         font-size: 0.9rem;
+      }
+  
+      .game-options-container span{
+          width: 90%;
+          height: 2.5rem;
+      }
+      .game-options-container span label{
+          font-size: 0.8rem;
+      }
+      .modal-content-container{
+          width: 90%;
+          height: 25rem;
+      }
+  
+      .modal-content-container h1{
+          font-size: 1.2rem;
+      }
+  }
+  
+  @media(min-width : 350px) and (max-width : 700px){
+     .game-quiz-container{
+         width: 90%;
+         height: 80vh;
+      }
+      .game-details-container h1{
+          font-size: 1rem;
+      }
+  
+      .game-question-container{
+          height: 8rem;
+      }
+  
+      .game-question-container h1{
+          font-size: 0.9rem;
+       }
+  
+      .game-options-container span{
+          width: 90%;
+      }
+      .modal-content-container{
+          width: 90%;
+          height: 25rem;
+      }
+      .modal-content-container h1{
+          font-size: 1.2rem;
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .topnav {
+          width: 70px; /* Keep navigation bar small on smaller screens */
+      }
+  
+      .content {
+          margin-left: 80px; /* Ensure content adjusts without affecting navigation bar */
+          width: calc(100% - 80px); /* Adjust width to fit remaining space */
+      }
+  }
+  
+  @media (max-width: 600px) {
+      .topnav {
+          width: 60px; /* Shrink the navigation bar on very small screens */
+      }
+  
+      .content {
+          margin-left: 70px; /* Adjust margin to account for smaller navigation */
+          width: calc(100% - 70px); /* Adjust width to fit content */
+      }
+  
+      /* Adjust quiz size for smaller screens */
+      .game-quiz-container {
+          width: 90%; /* Use a percentage for smaller screens */
+          height: auto; /* Let height adjust dynamically */
+      }
+  }
+  
+  
+  
+  @keyframes transitionIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+    }
+  }
