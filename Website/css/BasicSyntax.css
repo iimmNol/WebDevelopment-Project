@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+    font-weight: 400; /* You can adjust the font weight as needed */
+    background: rgb(13,13,13);
+    background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-bottom:50px;
+    }
+
+    @keyframes transitionIn {
+from {
+opacity: 0;
+transform: translateY(20px); /* Start slightly below */
+}
+to {
+opacity: 1;
+transform: translateY(0); /* End at normal position */
+}
+}
+    h1 {
+        font-size: 1.75em; 
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 20px; 
+        color: #3fbf99;
+        position: relative;
+        animation: transitionIn 0.75s;
+    }
+
+    h3 {
+        font-size: 2.5em; 
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 40px; 
+        color: #3fbf99;
+        position: relative;
+        animation: transitionIn 0.75s;
+    }
+
+    h4{
+        font-size: 2.5em; 
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 40px; 
+        color: #3fbf99;
+        position: relative;
+        animation: transitionIn 0.75s;
+    }
+    h5{
+        font-size: 2.5em; 
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 40px; 
+        color: #3fbf99;
+        position: relative;
+        animation: transitionIn 0.75s;
+    }
+
+    p.note::before {
+        content: "NOTE";
+        display: inline-block;
+        background: rgb(13,13,13);
+        background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%);
+        color: white; 
+        padding: 2px 4px;
+        margin-right: 10px;
+        font-weight: bold;
+        font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+        font-weight: 400; /* You can adjust the font weight as needed */
+        animation: transitionIn 0.75s;
+    }
+
+    p.note {
+        background: rgb(13,13,13);
+        background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%); 
+        padding: 10px;
+        border-radius: 5px;
+        font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+        font-weight: 400; /* You can adjust the font weight as needed */
+        text-align: center; 
+        font-style: italic;
+        color: white; 
+        animation: transitionIn 0.75s;
+    }
+
+    p.note1::before {
+        content: "NOTE";
+        display: inline-block;
+        background: rgb(13,13,13);
+        background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%);
+        color: white; 
+        padding: 2px 4px;
+        margin-right: 10px;
+        font-weight: bold;
+        font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+        font-weight: 400; /* You can adjust the font weight as needed */
+        animation: transitionIn 0.75s;
+    }
+
+    p.note1 {
+        background: rgb(13,13,13);
+        background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%);
+        padding: 10px;
+        border-radius: 5px;
+        font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+        font-weight: 400; /* You can adjust the font weight as needed */
+        margin-top: -10px; /* Adjust this to move the note closer to the headline */
+        text-align: center; /* To align the note with the centered headlines */
+        font-style: italic;
+        color: white; 
+        animation: transitionIn 0.75s;
+    }
+
+.container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); 
+gap: 20px;
+max-width: 1200px;
+background: rgb(13,13,13);
+background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%);
+padding: 30px;
+border-radius: 20px;
+margin-top: 20px;
+width: 100%;
+justify-content: center; 
+align-items: center;
+animation: transitionIn 0.75s;
+}
+
+.container div {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+
+.box {
+background-color: #000;
+color: #fff;
+padding: 20px;
+border-radius: 10px;
+text-align: left;
+min-height: 250px; 
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+}
+
+.box h2 {
+font-size: 18px;
+margin-bottom: 10px;
+margin: 10px 0;
+color: #f4f4f4;
+font-size: 18px;
+}
+
+.code {
+background-color: #222;
+padding: 10px;
+border-radius: 5px;
+font-family: 'Courier New', Courier, monospace;
+color: #3fbf99;
+font-size: 14px;
+}
+
+.try-it {
+display: inline-block;
+margin-top: 10px;
+padding: 8px 16px;
+background-color: #3fbf99;
+color: #000;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.try-it:hover {
+background-color: #447c69;
+}
+
+.variables-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr); 
+gap: 20px;
+max-width: 1200px;
+padding: 30px;
+margin-top: 20px;
+width: 100%;
+justify-content: center;
+background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(61,61,61,1) 73%, rgba(73,91,85,1) 100%);
+border-radius: 50px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); 
+}
+
+.variables-container div {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+text-align: center;
+transition: transform 0.3s ease;
+padding: 15px;
+border-radius: 10px;
+background-color: #1c1c1c;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.variables-container div:hover {
+transform: scale(1.05);
+background-color: #2d2d2d;
+}
+
+.variables-container div img {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 15px;
+}
+
+.variables-container div p {
+color: #3fbf99;
+font-size: 1.1em;
+margin-top: 10px;
+line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+.variables-container {
+    grid-template-columns: 1fr 1fr; 
+}
+}
+
+@media (max-width: 600px) {
+.variables-container {
+    grid-template-columns: 1fr; 
+}
+}

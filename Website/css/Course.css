@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+    font-weight: 400; /* You can adjust the font weight as needed */
+    color: #fff; /* This will keep the text color consistent with your dark background */
+    background: rgb(13,13,13);
+    background: linear-gradient(90deg, rgba(13,13,13,1) 0%, rgba(61,61,61,1) 73%, rgba(68,124,105,1) 100%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Smooth fade-in animation for content */
+@keyframes transitionIn {
+from {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly below */
+}
+to {
+  opacity: 1;
+  transform: translateY(0); /* End at normal position */
+}
+}
+.title {
+margin-left: 220px;
+padding: 10px;
+color: #ffffff;
+font-size: 30px;
+}
+
+#titleBackground {
+background-image: url(green.png);
+width: 234px;
+height: 100px;
+margin-bottom: 30px;
+}
+
+.underline {
+text-decoration: underline;
+text-underline-offset: 12px;  
+text-decoration-thickness: 2px;  
+}
+.MainContainer{
+margin-top: 50px;
+margin-bottom: 50px;
+margin-left: auto;
+margin-right: auto;
+animation: transitionIn 0.75s;
+}
+  .container {
+    border: 1px solid #000000;
+    padding: 50px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: #121212;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 30px;
+    color: #00ffb7;
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 30px;
+  }
+
+  .course-card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 0px;
+    border-radius: 10px;
+    background: rgb(38,40,39);
+    color: #00ffb7;
+    background: linear-gradient(90deg, rgba(38,40,39,1) 0%, rgba(222,237,233,0) 73%, rgba(64,199,158,0.29698375870069604) 100%);
+    
+  }
+
+  .course-card img {
+    width: 100%;
+    height: 55%; /* Adjust as needed */
+    object-fit: cover;
+    margin-bottom: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .course-card img:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 26px;
+    background-color: grey;
+    transform: scale(1.05);
+  }
+
+  .course-card h3 {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Barlow Condensed', 'Roboto', sans-serif;
+    color: #00ffb7;
+    display: inline-block; 
+  }
+
+  .course-card h3:hover {
+    transform: scale(1.05);
+  }
+
+  .start-button {
+    background-color: #00bfa5; 
+    color: #00ffb7;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block; 
+  }
+
+  .start-button:hover {
+    background-color: #008c73;
+
+  }
+/* switch button */
+.switch {
+position: relative;
+display: inline-block;
+width: 100px;
+height: 34px;
+margin-left: 180px;
+margin-top: 13px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: grey;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: #04AA6D;
+-webkit-transition: .4s;
+transition: .4s;
+color: transparent; /* Initially hidden */
+}
+
+input:checked + .slider {
+background-color: #000000;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(65px);
+}
+input:checked + .slider:before::after {
+content: "→"; /* Right arrow */
+color: black; /* Arrow color */
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.switch-text {
+position: absolute;
+top: 50%;
+left: 24px; /* Adjust to position */
+transform: translateY(-50%);
+color: #00ffb7;
+font-size: 15px; /* Font size for "Start" */
+opacity: 0; /* Initially hidden */
+transition: opacity 0.4s ease;
+}
+
+/* Show "Start" when checked */
+input:checked + .slider + .switch-text {
+opacity: 1;
+}
+/* Text Your Self */
+  .test-yourself {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .test-yourself a {
+    text-decoration: none;
+    color: #00bfa5;
+  }
+
+.test {
+background-color: #04AA6D; /* Green */
+border: none;
+color: black;
+padding: 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+cursor: pointer;
+border-radius:30px;
+font-weight: bold;
+}
+
+.test:hover {
+background-color: #447c69;
+}
