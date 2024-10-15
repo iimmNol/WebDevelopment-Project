@@ -1,0 +1,101 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+}
+@keyframes transitionIn {
+from {
+opacity: 0;
+transform: translateY(20px); /* Start slightly below */
+}
+to {
+opacity: 1;
+transform: translateY(0); /* End at normal position */
+}
+}
+.header {
+color:white;
+margin-top: -10px;
+margin-left: 120px;
+font-size: 30px;
+animation: transitionIn 0.75s;
+}
+.logo2 {
+width: 200px;
+margin-top: 90px;
+margin-left: 90px;
+padding: 20px;
+animation: transitionIn 0.75s;
+}
+.content {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+gap: 20;
+animation: transitionIn 0.75s;
+}
+.left {
+margin-left: 20px;
+animation: transitionIn 0.75s;
+
+}
+
+.introContext {
+color:black;
+padding: 45px;
+margin-left: 50px;
+margin-right: 50px;
+border: solid 2px grey;
+background-color: white;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+text-align: justify; 
+font-size: 25px;
+animation: transitionIn 0.75s;
+}
+
+.left img {
+width: 70%;
+height: 80%;
+border: solid 2px grey;
+background-color: white;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+border-radius: 20px;
+margin-left: 50px;
+margin-top: -250px;
+text-align: left; 
+margin-bottom: 20px;
+
+}
+
+.introContext2 {
+color: white;
+margin-right: 200px;
+font-size: 18px;
+margin-left: 62px;
+letter-spacing: 2px;
+}
+
+.WhyPHP {
+color: white;
+padding: 45px;
+border: solid 2px grey;
+border-top-left-radius: 25px;
+margin-right: 60px;
+background-color: #006247;
+font-size: 27px;
+letter-spacing: 3px;
+margin-top: -400px;
+margin-left: -50px;
+}
+
+.head {
+display: block;
+
+}
+
+.center {
+    align-items: center;
+}

@@ -1,0 +1,43 @@
+.back2 {
+    margin-right: auto;
+    padding: 20px;
+}
+
+.next2 {
+    margin-left: auto;
+    padding: 20px;
+}
+
+.next {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius:30px;
+    font-weight: bold;
+}
+
+.next:hover {
+    background-color: #447c69;
+}
+
+.back {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius:30px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background-color: #447c69;
+}
