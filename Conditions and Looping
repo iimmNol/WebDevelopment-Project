@@ -8,7 +8,7 @@
     </head>
 <body>
 <?php
-        $page_title = "CONDITIONAL"; // Using PHP variables
+        $page_title = "CONDITIONAL STATEMENTS"; // Using PHP variables
         echo "<h5>$page_title</h5>";
     ?>
     <div class="variables-container1">
